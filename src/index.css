@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* LibraSys Design System - Professional Library Management UI
+All colors MUST be HSL. Typography: Poppins for clean, geometric aesthetic.
+*/
+
+@layer base {
+  :root {
+    /* LibraSys Color Palette */
+    --background: 216 12% 98%; /* Very light, soft gray (#F8F9FA) */
+    --foreground: 210 11% 24%; /* Dark charcoal gray (#343a40) */
+
+    --card: 0 0% 100%; /* Pure white for cards */
+    --card-foreground: 210 11% 24%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 11% 24%;
+
+    /* Primary: Deep, professional blue (#0A4D68) */
+    --primary: 198 85% 22%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: Light background variations */
+    --secondary: 216 12% 96%;
+    --secondary-foreground: 210 11% 24%;
+
+    --muted: 216 12% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Accent: Vibrant, friendly teal (#088395) */
+    --accent: 187 91% 31%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Success: Gentle green (#28a745) */
+    --success: 134 61% 41%;
+    --success-foreground: 0 0% 100%;
+
+    /* Warning: Soft amber (#ffc107) */
+    --warning: 45 100% 51%;
+    --warning-foreground: 210 11% 24%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 198 85% 22%;
+
+    /* LibraSys specific design tokens */
+    --radius: 8px; /* Rounded corners as specified */
+    
+    /* Shadows for depth */
+    --shadow-card: 0 2px 8px hsla(210, 11%, 24%, 0.08);
+    --shadow-card-hover: 0 4px 16px hsla(210, 11%, 24%, 0.12);
+    --shadow-button: 0 2px 4px hsla(198, 85%, 22%, 0.15);
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(198, 85%, 22%), hsl(187, 91%, 31%));
+    --gradient-card: linear-gradient(180deg, hsl(0, 0%, 100%), hsl(216, 12%, 98%));
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode with LibraSys professional theme */
+    --background: 210 11% 7%;
+    --foreground: 216 12% 95%;
+
+    --card: 210 11% 9%;
+    --card-foreground: 216 12% 95%;
+
+    --popover: 210 11% 9%;
+    --popover-foreground: 216 12% 95%;
+
+    --primary: 198 85% 22%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 11% 12%;
+    --secondary-foreground: 216 12% 95%;
+
+    --muted: 210 11% 12%;
+    --muted-foreground: 215 16% 65%;
+
+    --accent: 187 91% 31%;
+    --accent-foreground: 0 0% 100%;
+
+    --success: 134 61% 41%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 45 100% 51%;
+    --warning-foreground: 210 11% 7%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 11% 18%;
+    --input: 210 11% 18%;
+    --ring: 198 85% 22%;
+    
+    --shadow-card: 0 2px 8px hsla(0, 0%, 0%, 0.25);
+    --shadow-card-hover: 0 4px 16px hsla(0, 0%, 0%, 0.35);
+    --shadow-button: 0 2px 4px hsla(198, 85%, 22%, 0.25);
+
+    --sidebar-background: 210 11% 7%;
+    --sidebar-foreground: 216 12% 95%;
+    --sidebar-primary: 198 85% 22%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 11% 12%;
+    --sidebar-accent-foreground: 216 12% 95%;
+    --sidebar-border: 210 11% 18%;
+    --sidebar-ring: 187 91% 31%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-poppins antialiased;
+  }
+
+  /* LibraSys Custom Utilities */
+  .card-shadow {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .card-shadow-hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+  
+  .button-shadow {
+    box-shadow: var(--shadow-button);
+  }
+}
